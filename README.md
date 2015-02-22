@@ -28,3 +28,52 @@ If you are in the defensive side, you can use this script to improve your emulat
 
 
 
+The typical sturcture of a device(or emulator)-finger-print:
+
+	- android.R$styleable
+
+	- android.app
+
+	- android.content
+
+	- android.database
+
+	- android.ddm
+
+	- android.graphics
+
+	- android.hardware
+
+	- android.location
+
+	- android.media
+
+	- android.net
+
+	- android.nfc
+
+	- android.opengl
+
+	- android.os
+
+	- android.provider
+
+	- android.text
+
+	- android.util
+
+	- android.view
+
+	- android.widget
+
+	- com.android.internal
+
+	- com.android.org
+
+	- com.android.webview
+
+
+
+
+
+
