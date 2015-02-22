@@ -1,17 +1,14 @@
 
 
-file1 = open('oneplus.txt').readlines();
-file2 = open('google.txt').readlines();
-
+# file1 = open('oneplus.txt').readlines();
+# file2 = open('google.txt').readlines();
 
 # text_in_file1 = file1.readlines();
-
 # for line in file1:
 # 	print line
 
 
 #First find the difference between function calls
-
 # count the line numbers
 countFile1 = 0
 file1N = open('oneplus.txt', 'rb')
@@ -36,14 +33,54 @@ file2N.close()
 
 
 # analyze the android.R$styleable function
-# according to Google SDK : 
-# The android.R.styleable class and its fields were removed from the public API,
-# to better ensure forward-compatibility for applications.
-# The constants declared in android.R.styleable were platform-specific and subject to arbitrary change across versions, 
-# so were not suitable for use by applications. You can still access the platform's styleable attributes from your resources or code. 
-# To do so, declare a custom resource element using a in your project's res/values/R.attrs file, then declare the attribute inside. 
-# For more information about custom resources, see Custom Layout Resources. 
-# Note that the android.R.styleable documentation is still provided in the SDK, but only as a reference of the platform's styleable attributes for the various elements.
+
+
+text_word = 'R$styleable'
+numberOfStyle1 = 0;
+file1 = open('oneplus.txt').readlines();
+for line in file1:
+	if text_word in line:
+		numberOfStyle1= numberOfStyle1+1
+print "file 1 contain functions with R$styleable ", numberOfStyle1
+
+numberOfStyle2 = 0;
+file2 = open('google.txt').readlines();
+for line in file2:
+	if text_word in line:
+		numberOfStyle2 = numberOfStyle2+1
+print "file 1 contain functions with R$styleable ", numberOfStyle2
+
+
+#the similarities between file 1 and file 2 in terms of function calls
+
+# file1 = open('oneplus.txt').readlines();
+# file2 = open('google.txt').readlines();
+# for line in file1:
+# 	print line
+# 	for line in file2:
+# 		print line
+
+# with open('oneplus.txt') as f:
+#     t1 = f.read().splitlines()
+
+#     t1s = set(t1)
+
+# with open('google.txt') as f:
+#     t2 = f.read().splitlines()
+#     t2s = set(t2)
+
+# #in file1 but not file2
+# print "Only in file1"
+# for diff in t1s-t2s:
+#     print t1.index(diff), diff
+
+# #in file2 but not file1
+# print "Only in file2"
+# for diff in t2s-t1s:
+#     print t2.index(diff), diff
+
+
+
 
 
 
