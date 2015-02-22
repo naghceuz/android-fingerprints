@@ -1,1 +1,15 @@
-Thses functions only appear the first file android.ddm.DdmHandleAppName.mAppName=ktwz.sandboxed.c2android.ddm.DdmHandleViewDebug.VUOP_CAPTURE_VIEW=1android.ddm.DdmHandleViewDebug.VUOP_PROFILE_VIEW=3android.ddm.DdmHandleViewDebug.CHUNK_VULW=1448430679android.ddm.DdmHandleViewDebug.CHUNK_VUOP=1448431440android.ddm.DdmHandleViewDebug.VUOP_SET_LAYOUT_PARAMETER=5android.ddm.DdmHandleViewDebug.VURT_CAPTURE_LAYERS=2android.ddm.DdmHandleViewDebug.CHUNK_VURT=1448432212android.ddm.DdmHandleViewDebug.ERR_INVALID_OP=-1android.ddm.DdmHandleViewDebug.VUOP_DUMP_DISPLAYLIST=2android.ddm.DdmHandleViewDebug.TAG=DdmViewDebugandroid.ddm.DdmHandleViewDebug.VUOP_INVOKE_VIEW_METHOD=4android.ddm.DdmHandleViewDebug.ERR_INVALID_PARAM=-2android.ddm.DdmHandleViewDebug.ERR_EXCEPTION=-3android.ddm.DdmHandleViewDebug.VURT_DUMP_HIERARCHY=1Thses functions only appear the second file
+.DdmHandleAppName.mAppName=ktwz.sandboxed.c2
+.DdmHandleViewDebug.CHUNK_VULW=1448430679
+.DdmHandleViewDebug.CHUNK_VUOP=1448431440
+.DdmHandleViewDebug.CHUNK_VURT=1448432212
+.DdmHandleViewDebug.ERR_EXCEPTION=-3
+.DdmHandleViewDebug.ERR_INVALID_OP=-1
+.DdmHandleViewDebug.ERR_INVALID_PARAM=-2
+.DdmHandleViewDebug.TAG=DdmViewDebug
+.DdmHandleViewDebug.VUOP_CAPTURE_VIEW=1
+.DdmHandleViewDebug.VUOP_DUMP_DISPLAYLIST=2
+.DdmHandleViewDebug.VUOP_INVOKE_VIEW_METHOD=4
+.DdmHandleViewDebug.VUOP_PROFILE_VIEW=3
+.DdmHandleViewDebug.VUOP_SET_LAYOUT_PARAMETER=5
+.DdmHandleViewDebug.VURT_CAPTURE_LAYERS=2
+.DdmHandleViewDebug.VURT_DUMP_HIERARCHY=1

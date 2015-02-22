@@ -1,1 +1,23 @@
-Thses functions only appear the first file android.util.EventLog$Event.PROCESS_OFFSET=4android.util.EventLog.COMMENT_PATTERN=^\s*(#.*)?$android.util.EventLog.TAG_PATTERN=^\s*(\d+)\s+(\w+)\s*(\(.*\))?\s*$android.util.Base64$Decoder.SKIP=-1android.util.TypedValue.MANTISSA_MULT=0.00390625android.util.EventLog$Event.NANOSECONDS_OFFSET=16android.util.EventLog$Event.INT_TYPE=0android.util.Base64$Decoder.EQUALS=-2android.util.EventLog$Event.LIST_TYPE=3android.util.EventLog$Event.THREAD_OFFSET=8android.util.EventLog$Event.TAG_OFFSET=20android.util.EventLog$Event.LENGTH_OFFSET=0android.util.EventLog$Event.PAYLOAD_START=20android.util.EventLog.TAG=EventLogandroid.util.DisplayMetrics.getDeviceDensity()=213android.util.Base64$Encoder.$assertionsDisabled=trueandroid.util.EventLog.TAGS_FILE=/system/etc/event-log-tagsandroid.util.EventLog$Event.STRING_TYPE=2android.util.TypedValue.getFloat()=0.0android.util.Base64.$assertionsDisabled=trueandroid.util.EventLog$Event.SECONDS_OFFSET=12android.util.EventLog$Event.LONG_TYPE=1android.util.EventLog$Event.DATA_START=24Thses functions only appear the second fileandroid.util.AndroidRuntimeException.getLocalizedMessage()=nullandroid.util.AndroidException.getLocalizedMessage()=nullandroid.util.AndroidException.getMessage()=nullandroid.util.Patterns.GOOD_IRI_CHAR_EX=a-zA-Z0-9 -ÿandroid.util.AndroidRuntimeException.getMessage()=null
+.Base64$Decoder.EQUALS=-2
+.Base64$Decoder.SKIP=-1
+.Base64$Encoder.$assertionsDisabled=true
+.Base64.$assertionsDisabled=true
+.DisplayMetrics.getDeviceDensity()=213
+.EventLog$Event.DATA_START=24
+.EventLog$Event.INT_TYPE=0
+.EventLog$Event.LENGTH_OFFSET=0
+.EventLog$Event.LIST_TYPE=3
+.EventLog$Event.LONG_TYPE=1
+.EventLog$Event.NANOSECONDS_OFFSET=16
+.EventLog$Event.PAYLOAD_START=20
+.EventLog$Event.PROCESS_OFFSET=4
+.EventLog$Event.SECONDS_OFFSET=12
+.EventLog$Event.STRING_TYPE=2
+.EventLog$Event.TAG_OFFSET=20
+.EventLog$Event.THREAD_OFFSET=8
+.EventLog.COMMENT_PATTERN=^\s*(#.*)?$
+.EventLog.TAG=EventLog
+.EventLog.TAGS_FILE=/system/etc/event-log-tags
+.EventLog.TAG_PATTERN=^\s*(\d+)\s+(\w+)\s*(\(.*\))?\s*$
+.TypedValue.MANTISSA_MULT=0.00390625
+.TypedValue.getFloat()=0.0

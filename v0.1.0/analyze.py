@@ -1,3 +1,8 @@
+import string
+import re
+
+
+
 thefile1 = 'Google-emulator.txt'
 thefile2 = 'samsung.txt'
 
@@ -35,6 +40,7 @@ print
 #generate a new file contains word about the key
 #three variable: file1 , file2 ,  
 
+
 def generatingFilefor(text_word , theComparsionfile1, theComparsionfile2, newOpenFile1, newOpenFile2, therealDifference):
 
 	file_object1_2 = open(newOpenFile1, 'w')
@@ -45,10 +51,13 @@ def generatingFilefor(text_word , theComparsionfile1, theComparsionfile2, newOpe
 	for line in file1:
 		if text_word in line:
 			numberOfStyle1= numberOfStyle1+1
+			#remove the text_word
+			line = re.sub(text_word,'',line)
 			file_object1_2.write(line)
 
-	print theComparsionfile1, " contain functions started with android.app's number is", numberOfStyle1
+	print theComparsionfile1, " contain functions started with" + str(text_word) + " s number is " + str(numberOfStyle1)
 	file_object1_2.close();
+
 
 
 	numberOfStyle2 = 0;
@@ -56,55 +65,84 @@ def generatingFilefor(text_word , theComparsionfile1, theComparsionfile2, newOpe
 	for line2 in file2:
 		if text_word in line2:
 			numberOfStyle2 = numberOfStyle2+1
+			line2 = re.sub(text_word,'',line2)
 			file_object2_2.write(line2)
 	print theComparsionfile2, " contain functions with with android.app number is", numberOfStyle2
 	file_object2_2.close();
 
-	#use the two new generating file and do comparsion
+	print 
+	print
 
-
-	with open(newOpenFile1) as f:
-	    t1 = f.read().splitlines()
-	    t1s = set(t1)
-
-	with open(newOpenFile2) as f:
-	    t2 = f.read().splitlines()
-	    t2s = set(t2)
 
 	theDifference = open(therealDifference, 'w')
+	
+	#try another approach
+	#render line by line
+	with open(newOpenFile1) as f:
+	    t1 = f.readlines()
 
-	#in file1 but not file2
-	print "These function only appears in", thefile1
-	print "They will be saved in the documment", therealDifference
-	print 
-	theDifference.writelines("Thses functions only appear the first file ")
-	print
-	for diff in t1s-t2s:
-		# for lin3 in diff:
-		# 	theDifference.writelines(lin3)
-		print diff
-		theDifference.writelines(diff)	    
-	print
+	for Oline1 in t1:
+		if Oline1 in open(newOpenFile2).readlines():
+			continue
+		else:
+			theDifference.write(Oline1)
+
+
+
+	with open(newOpenFile2) as f:
+	    t2 = f.readlines()
+
+	for Oline2 in t2:
+		if Oline1 in open(newOpenFile1).readlines():
+			continue
+		else:
+			theDifference.writelines(Oline2)
+
+
+
+	# #saved
+	# #use the two new generating file and do comparsion
+
+	# with open(newOpenFile1) as f:
+	#     t1 = f.read().splitlines()
+	#     t1s = set(t1)
+
+	# with open(newOpenFile2) as f:
+	#     t2 = f.read().splitlines()
+	#     t2s = set(t2)
+
+
+
+	# theDifference = open(therealDifference, 'w')
+
+	# #in file1 but not file2
+	# print "These function only appears in", thefile1
+	# print "They will be saved in the documment", therealDifference
+	# print
+	# for diff in t1s-t2s:
+	# 	print diff
+	# 	theDifference.writelines(diff)	    
+	# print
 	
 
-	#in file2 but not file1
-	print "These function only appears in", thefile2
-	print "They are saved in the documment", therealDifference
-	print
-	theDifference.writelines("Thses functions only appear the second file")
-	print
-	for diff in t2s-t1s:
-		# for line4 in diff:
-		# 	print line4
-	 #   		theDifference.writelines(line4)
-	 	print diff
-	 	theDifference.writelines(diff)
-	print
+	# #in file2 but not file1
+	# print "These function only appears in", thefile2
+	# print "They are saved in the documment", therealDifference
+	# print
+	# for diff in t2s-t1s:
+	#  	theDifference.writelines(diff)
+	# print
 
-	#open newOpenFile1 and newOpenFile2 , 
-	#since those two files contains files that are different
-	#then I will list the key and values and count them
+	# #open newOpenFile1 and newOpenFile2 , 
+	# #since those two files contains files that are different
+	# #then I will list the key and values and count them
 	
+
+
+
+
+
+
 
 
 #the first variable would be the key word
@@ -113,10 +151,10 @@ def generatingFilefor(text_word , theComparsionfile1, theComparsionfile2, newOpe
 #the rest would be the file you want to gnerate
 
 #for android.R$styleable
-generatingFilefor('android.R$styleable', thefile1, thefile2, 'file1-android.R$styleable.txt', 'file2-android.R$styleable.txt', "diffinR$styleable.txt" )
+generatingFilefor('android.R$styleable.', thefile1, thefile2, 'file1-android.R$styleable.txt', 'file2-android.R$styleable.txt', "diffinR$styleable.txt" )
 
 # #for android.app
-generatingFilefor('android.app', thefile1, thefile2, 'file1-android.app.txt', 'file2-android.app.txt', "diffinapp.txt")
+generatingFilefor('android.app.', thefile1, thefile2, 'file1-android.app.txt', 'file2-android.app.txt', "diffinapp.txt")
 
 #for android.content
 generatingFilefor('android.content', thefile1, thefile2, 'file1-android.content.txt', 'file2-android.content.txt','diffcontent.txt')
@@ -174,25 +212,6 @@ generatingFilefor('com.android.org', thefile1, thefile2, 'file1-com.android.org.
 
 #for com.android.webview
 generatingFilefor('com.android.webview', thefile1, thefile2, 'file1-com.android.webview.txt', 'file2-com.android.webview.txt','diffwebview.txt')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
