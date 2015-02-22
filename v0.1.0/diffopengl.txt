@@ -1,0 +1,1 @@
+Thses functions only appear the first fileandroid.opengl.GLES11Ext.GL_BYTE=5120android.view.HardwareRenderer.CACHE_PATH_SHADERS=com.android.opengl.shaders_cacheandroid.opengl.GLES11Ext.GL_FLOAT=5126android.opengl.GLES11Ext.GL_FIXED=5132android.opengl.GLES11Ext.GL_SHORT=5122android.opengl.ManagedEGLContext.TAG=ManagedEGLContextThses functions only appear the second file
