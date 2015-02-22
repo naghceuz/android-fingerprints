@@ -1,6 +1,7 @@
 thefile1 = 'Google-emulator.txt'
 thefile2 = 'samsung.txt'
 
+print "Overview"
 
 countFile1 = 0
 file1N = open(thefile1, 'rb')
@@ -22,6 +23,10 @@ while True:
 print thefile2,"has" , countFile2, "function calls"
 file2N.close()
 
+
+print 
+print 
+print
 
 
 # analyze the android.app function
@@ -72,9 +77,13 @@ def generatingFilefor(text_word , theComparsionfile1, theComparsionfile2, newOpe
 	print "These function only appears in", thefile1
 	print "They will be saved in the documment", therealDifference
 	print 
-	theDifference.write("Thses functions only appear the first file")
+	theDifference.writelines("Thses functions only appear the first file ")
+	print
 	for diff in t1s-t2s:
-		theDifference.write(diff)	    
+		# for lin3 in diff:
+		# 	theDifference.writelines(lin3)
+		print diff
+		theDifference.writelines(diff)	    
 	print
 	
 
@@ -82,16 +91,20 @@ def generatingFilefor(text_word , theComparsionfile1, theComparsionfile2, newOpe
 	print "These function only appears in", thefile2
 	print "They are saved in the documment", therealDifference
 	print
-	theDifference.write("Thses functions only appear the second file")
+	theDifference.writelines("Thses functions only appear the second file")
+	print
 	for diff in t2s-t1s:
-	    theDifference.write(diff)
+		# for line4 in diff:
+		# 	print line4
+	 #   		theDifference.writelines(line4)
+	 	print diff
+	 	theDifference.writelines(diff)
 	print
 
 	#open newOpenFile1 and newOpenFile2 , 
 	#since those two files contains files that are different
 	#then I will list the key and values and count them
 	
-
 
 
 #the first variable would be the key word
