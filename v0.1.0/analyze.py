@@ -24,59 +24,6 @@ file2N.close()
 
 
 
-# # analyze the android.R$styleable function
-
-# file_object1_1 = open('file1-android.R$styleable.txt', 'w')
-# file_object2_1 = open('file2-android.R$styleable.txt', 'w')
-
-# text_word = 'android.R$styleable'
-# numberOfStyle1 = 0;
-# file1 = open(thefile1).readlines();
-# for line in file1:
-# 	if text_word in line:
-# 		numberOfStyle1= numberOfStyle1+1
-# 		file_object1_1.write(line)
-
-# print "file 1 contain functions with R$styleable ", numberOfStyle1
-# file_object1_1.close();
-
-
-# numberOfStyle2 = 0;
-# file2 = open(thefile2).readlines();
-# for line2 in file2:
-# 	if text_word in line2:
-# 		numberOfStyle2 = numberOfStyle2+1
-# 		file_object2_1.write(line2)
-# print "file 2 contain functions with R$styleable ", numberOfStyle2
-# file_object2_1.close();
-
-
-# with open('file1-android.R$styleable.txt') as f:
-#     t1 = f.read().splitlines()
-#     t1s = set(t1)
-
-# with open('file2-android.R$styleable.txt') as f:
-#     t2 = f.read().splitlines()
-#     t2s = set(t2)
-
-# #in file1 but not file2
-# print "These function only appears in file1"
-# for diff in t1s-t2s:
-#     print t1.index(diff), diff
-
-# #in file2 but not file1
-# print "These function only appears in file2"
-# for diff in t2s-t1s:
-#     print t2.index(diff), diff
-
-
-
-print
-
-
-
-
-
 # analyze the android.app function
 
 
