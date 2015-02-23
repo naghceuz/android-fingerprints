@@ -86,7 +86,6 @@ def generatingFilefor(text_word , theComparsionfile1, theComparsionfile2, newOpe
 			theDifference.write(Oline1)
 
 
-
 	with open(newOpenFile2) as f:
 	    t2 = f.readlines()
 
@@ -190,19 +189,7 @@ writeFinal('diffwebview.txt');
 
 
 
-# import codecs
-# from htmlentitydefs import codepoint2name
-# def html_replace(exc):
-#     if isinstance(exc, (UnicodeEncodeError, UnicodeTranslateError)):
-#         s = [ u'&%s;' % codepoint2name[ord(c)]
-#               for c in exc.object[exc.start:exc.end] ]
-#         return ''.join(s), exc.end
-# codecs.register_error('html_replace', html_replace)
 
-
-
-# def encode_for_html(unicode_data, encoding='ascii'):
-#     return unicode_data.encode(encoding, 'html_replace')
 
 contents = open("Final.txt","r")
 with open("final.html", "w") as e:
