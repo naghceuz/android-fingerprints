@@ -1,6 +1,6 @@
-.GLES11Ext.GL_BYTE=5120
-.GLES11Ext.GL_FIXED=5132
-.GLES11Ext.GL_FLOAT=5126
-.GLES11Ext.GL_SHORT=5122
-.ManagedEGLContext.TAG=ManagedEGLContext
-android.view.HardwareRenderer.CACHE_PATH_SHADERS=com..shaders_cache
+GLES11Ext.GL_BYTE=5120
+GLES11Ext.GL_FIXED=5132
+GLES11Ext.GL_FLOAT=5126
+GLES11Ext.GL_SHORT=5122
+ManagedEGLContext.TAG=ManagedEGLContext
+android.view.HardwareRenderer.CACHE_PATH_SHADERS=com.shaders_cache

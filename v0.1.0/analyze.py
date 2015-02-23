@@ -100,45 +100,6 @@ def generatingFilefor(text_word , theComparsionfile1, theComparsionfile2, newOpe
 
 
 
-	# #saved
-	# #use the two new generating file and do comparsion
-
-	# with open(newOpenFile1) as f:
-	#     t1 = f.read().splitlines()
-	#     t1s = set(t1)
-
-	# with open(newOpenFile2) as f:
-	#     t2 = f.read().splitlines()
-	#     t2s = set(t2)
-
-
-
-	# theDifference = open(therealDifference, 'w')
-
-	# #in file1 but not file2
-	# print "These function only appears in", thefile1
-	# print "They will be saved in the documment", therealDifference
-	# print
-	# for diff in t1s-t2s:
-	# 	print diff
-	# 	theDifference.writelines(diff)	    
-	# print
-	
-
-	# #in file2 but not file1
-	# print "These function only appears in", thefile2
-	# print "They are saved in the documment", therealDifference
-	# print
-	# for diff in t2s-t1s:
-	#  	theDifference.writelines(diff)
-	# print
-
-	# #open newOpenFile1 and newOpenFile2 , 
-	# #since those two files contains files that are different
-	# #then I will list the key and values and count them
-	
-
-
 
 
 
@@ -157,61 +118,72 @@ generatingFilefor('android.R$styleable.', thefile1, thefile2, 'file1-android.R$s
 generatingFilefor('android.app.', thefile1, thefile2, 'file1-android.app.txt', 'file2-android.app.txt', "diffinapp.txt")
 
 #for android.content
-generatingFilefor('android.content', thefile1, thefile2, 'file1-android.content.txt', 'file2-android.content.txt','diffcontent.txt')
+generatingFilefor('android.content.', thefile1, thefile2, 'file1-android.content.txt', 'file2-android.content.txt','diffcontent.txt')
 
 #forandroid.database
-generatingFilefor('android.database', thefile1, thefile2, 'file1-android.database.txt', 'file2-android.database.txt','diffdatabase.txt')
+generatingFilefor('android.database.', thefile1, thefile2, 'file1-android.database.txt', 'file2-android.database.txt','diffdatabase.txt')
 
 #for android.ddm
-generatingFilefor('android.ddm', thefile1, thefile2, 'file1-android.ddm.txt', 'file2-android.ddm.txt',"diffddm.txt")
+generatingFilefor('android.ddm.', thefile1, thefile2, 'file1-android.ddm.txt', 'file2-android.ddm.txt',"diffddm.txt")
 
 #for android graphics
-generatingFilefor('android.graphics', thefile1, thefile2, 'file1-android.graphics.txt', 'file2-android.graphics.txt', 'diffgraphics.txt')
+generatingFilefor('android.graphics.', thefile1, thefile2, 'file1-android.graphics.txt', 'file2-android.graphics.txt', 'diffgraphics.txt')
 
 #for android.hardware
-generatingFilefor('android.hardware', thefile1, thefile2, 'file1-android.hardware.txt', 'file2-android.hardware.txt', 'diffhardware.txt')
+generatingFilefor('android.hardware.', thefile1, thefile2, 'file1-android.hardware.txt', 'file2-android.hardware.txt', 'diffhardware.txt')
 
 #for android.location
-generatingFilefor('android.location', thefile1, thefile2, 'file1-android.location.txt', 'file2-android.location.txt', 'difflocation.txt')
+generatingFilefor('android.location.', thefile1, thefile2, 'file1-android.location.txt', 'file2-android.location.txt', 'difflocation.txt')
 
 #for android.media
-generatingFilefor('android.media', thefile1, thefile2, 'file1-android.media.txt', 'file2-android.media.txt','diffmedia.txt')
+generatingFilefor('android.media.', thefile1, thefile2, 'file1-android.media.txt', 'file2-android.media.txt','diffmedia.txt')
 
 #for android.net
-generatingFilefor('android.net', thefile1, thefile2, 'file1-android.net.txt', 'file2-android.net.txt','diffnet.txt')
+generatingFilefor('android.net.', thefile1, thefile2, 'file1-android.net.txt', 'file2-android.net.txt','diffnet.txt')
 
 #for android.nfc
-generatingFilefor('android.nfc', thefile1, thefile2, 'file1-android.nfc.txt', 'file2-android.nfc.txt','diffnfc.txt')
+generatingFilefor('android.nfc.', thefile1, thefile2, 'file1-android.nfc.txt', 'file2-android.nfc.txt','diffnfc.txt')
 
 #for android.opengl
-generatingFilefor('android.opengl', thefile1, thefile2, 'file1-android.opengl.txt', 'file2-android.opengl.txt','diffopengl.txt')
+generatingFilefor('android.opengl.', thefile1, thefile2, 'file1-android.opengl.txt', 'file2-android.opengl.txt','diffopengl.txt')
 
 #for android.os
-generatingFilefor('android.os', thefile1, thefile2, 'file1-android.os.txt', 'file2-android.os.txt','diffos.txt')
+generatingFilefor('android.os.', thefile1, thefile2, 'file1-android.os.txt', 'file2-android.os.txt','diffos.txt')
 
 #for android.provider
-generatingFilefor('android.provider', thefile1, thefile2, 'file1-android.provider.txt', 'file2-android.provider.txt','diffprovider.txt')
+generatingFilefor('android.provider.', thefile1, thefile2, 'file1-android.provider.txt', 'file2-android.provider.txt','diffprovider.txt')
 
 #for android.text
-generatingFilefor('android.text', thefile1, thefile2, 'file1-android.text.txt', 'file2-android.text.txt','diffandroid.txt')
+generatingFilefor('android.text.', thefile1, thefile2, 'file1-android.text.txt', 'file2-android.text.txt','diffandroid.txt')
 
 #for android.util
-generatingFilefor('android.util', thefile1, thefile2, 'file1-android.util.txt', 'file2-android.util.txt','diffutil.txt')
+generatingFilefor('android.util.', thefile1, thefile2, 'file1-android.util.txt', 'file2-android.util.txt','diffutil.txt')
 
 #for android.view
-generatingFilefor('android.view', thefile1, thefile2, 'file1-android.view.txt', 'file2-android.view.txt','diffview.txt')
+generatingFilefor('android.view.', thefile1, thefile2, 'file1-android.view.txt', 'file2-android.view.txt','diffview.txt')
 
 #for android.widget
-generatingFilefor('android.widget', thefile1, thefile2, 'file1-android.widget.txt', 'file2-android.widget.txt', 'diffwidget.txt')
+generatingFilefor('android.widget.', thefile1, thefile2, 'file1-android.widget.txt', 'file2-android.widget.txt', 'diffwidget.txt')
 
 #for com.android.internal
-generatingFilefor('com.android.internal', thefile1, thefile2, 'file1-com.android.internal.txt', 'file2-com.android.internal.txt','diffinternal.txt')
+generatingFilefor('com.android.internal.', thefile1, thefile2, 'file1-com.android.internal.txt', 'file2-com.android.internal.txt','diffinternal.txt')
 
 #for com.android.org
-generatingFilefor('com.android.org', thefile1, thefile2, 'file1-com.android.org.txt', 'file2-com.android.org.txt','difforg.txt')
+generatingFilefor('com.android.org.', thefile1, thefile2, 'file1-com.android.org.txt', 'file2-com.android.org.txt','difforg.txt')
 
 #for com.android.webview
-generatingFilefor('com.android.webview', thefile1, thefile2, 'file1-com.android.webview.txt', 'file2-com.android.webview.txt','diffwebview.txt')
+generatingFilefor('com.android.webview.', thefile1, thefile2, 'file1-com.android.webview.txt', 'file2-com.android.webview.txt','diffwebview.txt')
+
+
+
+
+
+
+
+
+
+
+
 
 
 
