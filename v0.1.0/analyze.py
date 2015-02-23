@@ -101,11 +101,6 @@ def generatingFilefor(text_word , theComparsionfile1, theComparsionfile2, newOpe
 
 
 
-
-
-
-
-
 #the first variable would be the key word
 #thefile1 would be the original files name
 #thefile2 would be the original files name -2
@@ -177,13 +172,44 @@ generatingFilefor('com.android.webview.', thefile1, thefile2, 'file1-com.android
 
 
 
+#open all the text
+#add into the file with the format: Detection Method  , key   , Value 
+
+fileFinal = open("Final.txt","w");
+
+
+def writeFinal( textfile):
+	#parse all the analyze file 
+	aFile = open(textfile).readlines();
+	fileFinal.writelines("For function " );
+	for line in aFile:
+		thenew = line.split("=")
+		fileFinal.write("function call:  " +  str(thenew[0]) + " value:  ")
+		thenew[1].rjust(10)
+		fileFinal.write( str(thenew[1]));
+
+writeFinal('diffwebview.txt');
 
 
 
+# import codecs
+# from htmlentitydefs import codepoint2name
+# def html_replace(exc):
+#     if isinstance(exc, (UnicodeEncodeError, UnicodeTranslateError)):
+#         s = [ u'&%s;' % codepoint2name[ord(c)]
+#               for c in exc.object[exc.start:exc.end] ]
+#         return ''.join(s), exc.end
+# codecs.register_error('html_replace', html_replace)
 
 
 
+# def encode_for_html(unicode_data, encoding='ascii'):
+#     return unicode_data.encode(encoding, 'html_replace')
 
+contents = open("Final.txt","r")
+with open("final.html", "w") as e:
+    for lines in contents.readlines():
+        e.write("<pre>" + lines + "</pre> <br>")
 
 
 
