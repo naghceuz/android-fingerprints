@@ -1,8 +1,6 @@
 import string
 import re
 
-
-
 thefile1 = 'Google-emulator.txt'
 thefile2 = 'samsung.txt'
 

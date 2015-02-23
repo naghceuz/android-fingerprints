@@ -1,2 +1,0 @@
-Settings$NameValueCache.NAME_EQ_PLACEHOLDER=name=?
-Settings$Secure.sIsSystemProcess=false
