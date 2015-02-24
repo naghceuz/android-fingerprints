@@ -49,6 +49,17 @@ for line1 in file1N:
 			samefunctiondifferentvalue.write(line1)
 
 
+
+
+
+
+
+
+
+
+
+
+
 #goal 3: different function , different value, and only in file1
 file3N = open("functionOnlyinFile1.txt", "w");
 

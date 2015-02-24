@@ -18,6 +18,7 @@ Description: It contains the same functions with the same value in both file
 
 Second output file:  same-function-different-value.txt.txt
 Description: It contains the same functions with the different values in both file
+The value is the value contained in your input file1
 
 
 Third output file: functionOnlyinFile1.txt
