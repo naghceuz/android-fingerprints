@@ -6,9 +6,31 @@ To Run the script:
 
 Move the two files with the txt format that you want to do comparsion into the same directory as this python script in your computer. 
 
-python file1.txt file2.txt
+python analyze.py file1.txt file2.txt
 
-It will generate different files based and generate a comprehensive report of the difference between file1.txt and file2.txt.
+It will generate four different files based and generate a comprehensive report of the difference between file1.txt and file2.txt.
+
+
+
+First output file:  same-function-same-value.txt
+Description: It contains the same functions with the same value in both file
+
+
+Second output file:  same-function-different-value.txt.txt
+Description: It contains the same functions with the different values in both file
+
+
+Third output file: functionOnlyinFile1.txt
+Description: It contains the unique functions only in your input file1
+
+
+Fourth output file: functionOnlyinFile2.txt 
+Description: It contains the unique functions only in your input file2
+
+
+
+
+
 
 
 
