@@ -4,6 +4,11 @@
 import os
 import sys
 
+print "This is a python script to analyze the difference between two Andriod device(or emulator) finger-print \n"
+
+
+
+
 
 # counters !
 # a function to count number of function calls in a file 
@@ -25,17 +30,42 @@ def quickfunctioncounter(filename):
 	# anotherfile1.close()
 
 
-
+# input two files you want to comparsion
 thefile1 = str(sys.argv[1])
+thefile2 = str(sys.argv[2])
+
+
+
+#pass the input file 3's name, thefile3 
+# for example, same-function-same-value.txt
+thefile3 = str(sys.argv[3])
+
+#pass the input
+#samefunctiondifferentvaluethevalueinFile1.txt
+thefile4 = str(sys.argv[4])
+
+#pass the input 
+#samefunctiondifferentvaluethevalueinFile2.txt
+thefile5 = str(sys.argv[5])
+
+# #pass the input
+# #functionOnlyinFile1.txt
+# thefile6 = str(sys.argv[6])
+
+# #pass the input
+# #functionOnlyinFile2.txt
+# thefile7 = str(sys.argv[7])
+
+
+
+print "The two files you input is:"
 
 print "argument 1", str(sys.argv[1])
 print "argument 2", str(sys.argv[2])
 
-thefile2 = str(sys.argv[2])
 
 file1N = open(thefile1, 'rb').readlines();
 file2N = open(thefile2, 'rb').readlines();
-
 
 
 def splitFuntionandValue(thefile, theNewFileName):
@@ -57,9 +87,12 @@ thefile1function = open("file1function.txt", "rb").readlines()
 thefile2function = open("file2function.txt", "rb").readlines()
 
 #goal 1: same function same value
-samefunctionsamevalue = open("same-function-same-value.txt", "w")
-samefunctiondifferentvalueValueinFile1 = open("samefunctiondifferentvaluethevalueinFile1.txt", "w")
-samefunctiondifferentvalueValueinFile2 = open("samefunctiondifferentvaluethevalueinFile2.txt", "w")
+# samefunctionsamevalue = open("same-function-same-value.txt", "w")
+#test 
+samefunctionsamevalue = open(thefile3, "w")
+
+samefunctiondifferentvalueValueinFile1 = open(thefile4, "w")
+samefunctiondifferentvalueValueinFile2 = open(thefile5, "w")
 
 #write comments for the same-function-same-value.txt file 
 samefunctionsamevalue.writelines("#This is the file which contain the same function with same value between file1 and file2 \n")
@@ -107,7 +140,7 @@ for line2 in file2N:
 
 
 #goal 3: different function , different value, and only in file1
-file3N = open("functionOnlyinFile1.txt", "w");
+file3N = open("functionOnlyinFile1", "w");
 file3N.writelines("#This file contains the unique functions only in file1 \n")
 
 
@@ -125,7 +158,7 @@ for line3 in file1N:
 
 
 #goal 4:different function , different value , and only in file2
-file4N = open("functionOnlyinFile2.txt", "w");
+file4N = open("functionOnlyinFile2", "w");
 file4N.writelines("#This file contains the unique functions only in file2 \n")
 
 
@@ -154,8 +187,6 @@ for line4 in file2N:
 
 
 #goal 6:specify output directory name at command line, place generated files in this directory
-
-
 
 
 
