@@ -5,6 +5,27 @@ import os
 import sys
 
 
+# counters !
+# a function to count number of function calls in a file 
+def quickfunctioncounter(filename):
+	#quick counter function
+	countFile1 = 0
+	anotherfile1 = open(filename, 'rb')
+	while True:
+		buffer = anotherfile1.read(8192*1024)
+		if not buffer:
+			break
+		countFile1 += buffer.count('\n')
+	print str(countFile1) + " function calls"
+	anotherfile1.close()
+	return countFile1
+	# for line in anotherfile1:
+	# 	countFile1 =  countFile1+1
+	# print countFile1 
+	# anotherfile1.close()
+
+
+
 thefile1 = str(sys.argv[1])
 
 print "argument 1", str(sys.argv[1])
@@ -40,14 +61,19 @@ samefunctionsamevalue = open("same-function-same-value.txt", "w")
 samefunctiondifferentvalueValueinFile1 = open("samefunctiondifferentvaluethevalueinFile1.txt", "w")
 samefunctiondifferentvalueValueinFile2 = open("samefunctiondifferentvaluethevalueinFile2.txt", "w")
 
+#write comments for the same-function-same-value.txt file 
+samefunctionsamevalue.writelines("#This is the file which contain the same function with same value between file1 and file2 \n")
+samefunctionsamevalue.writelines("#The file1 is:"+ str(sys.argv[1]) +"\n")
+samefunctionsamevalue.writelines("#The file2 is:"+ str(sys.argv[2]) +"\n")
 
-samefunctionsamevalue.writelines("#This is the file which contain the same function with same value between file1 and file2 ")
+
+#write comments for the samefunctiondifferentvaluethevalueinFile1.txt file 
 samefunctiondifferentvalueValueinFile1.writelines("#This is the file1 which contain the same function but different value between file1 and file2 ")
-samefunctiondifferentvalueValueinFile1.writelines("#and the value is from file1")
+samefunctiondifferentvalueValueinFile1.writelines("and the value is from file1 \n")
 
-
+#process the line1 and line2
 for line1 in file1N:
-	if line1[0] = "#": 
+	if line1[0] == "#": 
 		continue
 	elif line1 in file2N:
 		samefunctionsamevalue.write(line1);
@@ -59,13 +85,16 @@ for line1 in file1N:
 			samefunctiondifferentvalueValueinFile1.write(line1)
 
 
+# samefunctiondifferentvalueValueinFile1
+# quickfunctioncounter()
+
+#goal 2: same function different value - branch for file2
 samefunctiondifferentvalueValueinFile2.writelines("#This is the file1 which contain the same function but different value between file1 and file2 ")
-samefunctiondifferentvalueValueinFile2.writelines("#and the value is from file2 ")
-
-
-
+samefunctiondifferentvalueValueinFile2.writelines("and the value is from file2 \n")
 
 for line2 in file2N:
+	if line2[0] == "#": 
+		continue
 	if line2 in file1N:
 		continue;
 	else:
@@ -77,32 +106,60 @@ for line2 in file2N:
 
 
 
-
 #goal 3: different function , different value, and only in file1
 file3N = open("functionOnlyinFile1.txt", "w");
+file3N.writelines("#This file contains the unique functions only in file1 \n")
+
 
 for line3 in file1N:
-	theline3 = line3.split("=")
-	theline3[0] += '\n'
-	# for a in thefile2function:
-	if theline3[0] in thefile2function:
+	if line3[0] == "#": 
 		continue
 	else:
-		file3N.write(line3);
+		theline3 = line3.split("=")
+		theline3[0] += '\n'
+		# for a in thefile2function:
+		if theline3[0] in thefile2function:
+			continue
+		else:
+			file3N.write(line3);
 
 
 #goal 4:different function , different value , and only in file2
 file4N = open("functionOnlyinFile2.txt", "w");
+file4N.writelines("#This file contains the unique functions only in file2 \n")
+
 
 for line4 in file2N:
-	theline4 = line4.split("=")
-	theline4[0] += '\n'
-	if theline4[0] in thefile1function:
+	if line4[0] == "#": 
 		continue
 	else:
-		file4N.write(line4);
+		theline4 = line4.split("=")
+		theline4[0] += '\n'
+		if theline4[0] in thefile1function:
+			continue
+		else:
+			file4N.write(line4);
 
 
+
+#goal 5:  identify values that change, this will possibly identify variable 
+#values across device we can use to autogenerate values
+
+#files which are run at dfferent times but on same device 
+# and indicate values that change. this will identify variable chaning values to the system
+
+#input file1 and file2 
+#to see among the same function they have , 
+#compare 
+
+
+#goal 6:specify output directory name at command line, place generated files in this directory
+
+
+
+
+
+#remove the useless files
 os.remove("file1function.txt")
 os.remove("file2function.txt")
 
