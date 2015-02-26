@@ -40,8 +40,16 @@ samefunctionsamevalue = open("same-function-same-value.txt", "w")
 samefunctiondifferentvalueValueinFile1 = open("samefunctiondifferentvaluethevalueinFile1.txt", "w")
 samefunctiondifferentvalueValueinFile2 = open("samefunctiondifferentvaluethevalueinFile2.txt", "w")
 
+
+samefunctionsamevalue.writelines("#This is the file which contain the same function with same value between file1 and file2 ")
+samefunctiondifferentvalueValueinFile1.writelines("#This is the file1 which contain the same function but different value between file1 and file2 ")
+samefunctiondifferentvalueValueinFile1.writelines("#and the value is from file1")
+
+
 for line1 in file1N:
-	if line1 in file2N:
+	if line1[0] = "#": 
+		continue
+	elif line1 in file2N:
 		samefunctionsamevalue.write(line1);
 	else:
 		#goal 2: same function different value
@@ -49,6 +57,12 @@ for line1 in file1N:
 		line1count[0] += '\n'
 		if line1count[0] in thefile2function:
 			samefunctiondifferentvalueValueinFile1.write(line1)
+
+
+samefunctiondifferentvalueValueinFile2.writelines("#This is the file1 which contain the same function but different value between file1 and file2 ")
+samefunctiondifferentvalueValueinFile2.writelines("#and the value is from file2 ")
+
+
 
 
 for line2 in file2N:
@@ -60,7 +74,6 @@ for line2 in file2N:
 		line2count[0] += '\n'
 		if line2count[0] in thefile1function:
 			samefunctiondifferentvalueValueinFile2.write(line2)
-
 
 
 
