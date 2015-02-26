@@ -16,6 +16,7 @@ file1N = open(thefile1, 'rb').readlines();
 file2N = open(thefile2, 'rb').readlines();
 
 
+
 def splitFuntionandValue(thefile, theNewFileName):
 	fileNew = open(theNewFileName,'w')
 	for line in thefile:
@@ -36,7 +37,8 @@ thefile2function = open("file2function.txt", "rb").readlines()
 
 #goal 1: same function same value
 samefunctionsamevalue = open("same-function-same-value.txt", "w")
-samefunctiondifferentvalue = open("same-function-different-value.txt", "w")
+samefunctiondifferentvalueValueinFile1 = open("samefunctiondifferentvaluethevalueinFile1.txt", "w")
+samefunctiondifferentvalueValueinFile2 = open("samefunctiondifferentvaluethevalueinFile2.txt", "w")
 
 for line1 in file1N:
 	if line1 in file2N:
@@ -46,15 +48,18 @@ for line1 in file1N:
 		line1count = line1.split("=")
 		line1count[0] += '\n'
 		if line1count[0] in thefile2function:
-			samefunctiondifferentvalue.write(line1)
+			samefunctiondifferentvalueValueinFile1.write(line1)
 
 
-
-
-
-
-
-
+for line2 in file2N:
+	if line2 in file1N:
+		continue;
+	else:
+		#goal 2: same function different value
+		line2count = line2.split("=")
+		line2count[0] += '\n'
+		if line2count[0] in thefile1function:
+			samefunctiondifferentvalueValueinFile2.write(line2)
 
 
 
