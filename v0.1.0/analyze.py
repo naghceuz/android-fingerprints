@@ -48,20 +48,20 @@ thefile4 = str(sys.argv[4])
 #samefunctiondifferentvaluethevalueinFile2.txt
 thefile5 = str(sys.argv[5])
 
-# #pass the input
-# #functionOnlyinFile1.txt
-# thefile6 = str(sys.argv[6])
+#pass the input
+#functionOnlyinFile1.txt
+thefile6 = str(sys.argv[6])
 
-# #pass the input
-# #functionOnlyinFile2.txt
-# thefile7 = str(sys.argv[7])
+#pass the input
+#functionOnlyinFile2.txt
+thefile7 = str(sys.argv[7])
 
 
 
 print "The two files you input is:"
 
-print "argument 1", str(sys.argv[1])
-print "argument 2", str(sys.argv[2])
+print "File1: ", str(sys.argv[1])
+print "File2: ", str(sys.argv[2])
 
 
 file1N = open(thefile1, 'rb').readlines();
@@ -140,7 +140,9 @@ for line2 in file2N:
 
 
 #goal 3: different function , different value, and only in file1
-file3N = open("functionOnlyinFile1", "w");
+#functionOnlyinFile1.txt
+
+file3N = open(thefile6, "w");
 file3N.writelines("#This file contains the unique functions only in file1 \n")
 
 
@@ -158,7 +160,10 @@ for line3 in file1N:
 
 
 #goal 4:different function , different value , and only in file2
-file4N = open("functionOnlyinFile2", "w");
+#functionOnlyinFile2.txt
+
+
+file4N = open(thefile7, "w");
 file4N.writelines("#This file contains the unique functions only in file2 \n")
 
 
@@ -173,20 +178,6 @@ for line4 in file2N:
 		else:
 			file4N.write(line4);
 
-
-
-#goal 5:  identify values that change, this will possibly identify variable 
-#values across device we can use to autogenerate values
-
-#files which are run at dfferent times but on same device 
-# and indicate values that change. this will identify variable chaning values to the system
-
-#input file1 and file2 
-#to see among the same function they have , 
-#compare 
-
-
-#goal 6:specify output directory name at command line, place generated files in this directory
 
 
 

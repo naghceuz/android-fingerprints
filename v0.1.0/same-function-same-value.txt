@@ -1,6 +1,6 @@
 #This is the file which contain the same function with same value between file1 and file2 
-#The file1 is:google.txt
-#The file2 is:oneplus.txt
+#The file1 is:oneplus.txt
+#The file2 is:google.txt
 android.R$styleable.AbsListView_cacheColorHint=6
 android.R$styleable.AbsListView_choiceMode=7
 android.R$styleable.AbsListView_drawSelectorOnTop=1

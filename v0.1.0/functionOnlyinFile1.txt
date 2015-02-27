@@ -1,4 +1,4 @@
-#This file contains the unique functions only in file2 
+#This file contains the unique functions only in file1 
 android.R$styleable.AndroidManifestResourceOverlay_priority=0
 android.R$styleable.AndroidManifestResourceOverlay_targetPackage=1
 android.app.ActivityManager.RECENT_DO_NOT_COUNT_EXCLUDED=4
