@@ -1,168 +1,107 @@
-#analyze
-#and for methodcallsthesame, 
-#it doesnt help us unless we know what the values are
+#name:analyzeMutiply.py
+#author: Owen Zhang     time: Feb 28, 2015
+#this script is going to analyze mutiply Android source code
+#for example:if you do comparsion between three different files
+# the input will be: oneplus.txt , google.txt , samsung.txt
+# the output will be:
+# output1: samefunctionsamevalue.txt   check
+# output2: samefunctiondifferentvalueinFile1.txt 
+# output3: samefunctiondifferentvalueinFile2.txt 
+# output4: samefunctiondifferentvalueinFile3.txt
+# 
+# output5: uniquefunctioninfile1.txt
+# output6: uniquefunctioninfile2.txt
+# output7: uniquefunctioninfile2.txt
+
 import os
 import sys
 
-print "This is a python script to analyze the difference between two Andriod device(or emulator) finger-print \n"
-
-print str(len(sys.argv))
-
-
-# counters !
-# a function to count number of function calls in a file 
-def quickfunctioncounter(filename):
-	#quick counter function
-	countFile1 = 0
-	anotherfile1 = open(filename, 'rb')
-	while True:
-		buffer = anotherfile1.read(8192*1024)
-		if not buffer:
-			break
-		countFile1 += buffer.count('\n')
-	print str(countFile1) + " function calls"
-	anotherfile1.close()
-	return countFile1
-	# for line in anotherfile1:
-	# 	countFile1 =  countFile1+1
-	# print countFile1 
-	# anotherfile1.close()
+def compare(list1 , list2):
+	list3 = []
+	for line1 in list1:
+		if line1 in list2:
+			list3.append(line1)
+	return list3
 
 
-# input two files you want to comparsion
-thefile1 = str(sys.argv[1])
-thefile2 = str(sys.argv[2])
+#goal 1: samefunctionsamevalue.txt
+a = len(sys.argv) - 2
+count = 2
+thenew = open(str(sys.argv[1]),"rb").readlines()
+
+while (a>0):
+	newlist = open(str(sys.argv[count]),'rb').readlines()
+	thenew = compare(thenew, newlist)
+	a = a-1
+	count = count +1
+
+#write into the samefunctionsamevalue
+samefunctionsamevalue = open("samefunctionsamevalue.txt","w")
+for line in thenew:
+	samefunctionsamevalue.writelines(line)
 
 
 
 
+#Goal 2:samefunctiondifferentvalueinFile1.txt samefunctiondifferentvalueinFile2.txt 
+
+list4 = []
+a = len(sys.argv) - 2
+count = 2
+
+inputFile1 = open(str(sys.argv[1]),"rb").readlines()
+samefunctiondifferentvalueinFile1 = open("samefunctiondifferentvalueinFile1.txt",'w')
+
+for line2 in inputFile1:
+	thecutline = line2.split("=")
+	thecutline[0] += "\n"
+	list4.append(thecutline[0])
 
 
-print "The two files you input is:"
+# make a big file which contains all the function
+while(a>0):
+	thenewlist = open(str(sys.argv[count]),'rb').readlines()
+	print str(count)
+	for line3 in thenewlist:
+		thecutline2 = line3.split("=")
+		thecutline2[0] += '\n'
+		list4.append(thecutline2[0])
+	a = a-1
+	count = count +1
 
-print "File1: ", str(sys.argv[1])
-print "File2: ", str(sys.argv[2])
+#now list4 contains all the function
+# loop all the function in 
 
+samefunctionsamevalue =  open("samefunctionsamevalue.txt","rb").readlines()
 
-file1N = open(thefile1, 'rb').readlines();
-file2N = open(thefile2, 'rb').readlines();
-
-
-def splitFuntionandValue(thefile, theNewFileName):
-	fileNew = open(theNewFileName,'w')
-	for line in thefile:
-		thecuttenline = line.split("=")
-		fileNew.write(thecuttenline[0]+ "\n")
-
-
-#fileNew.write(thecuttenline[0]+ "\n")
-#a file named file1function contains file1's all function
-splitFuntionandValue(file1N, "file1function.txt");
-
-#a file named file2function contains file2's all function
-splitFuntionandValue(file2N, "file2function.txt");
+a = len(sys.argv) - 1
+count = 1
 
 
-thefile1function = open("file1function.txt", "rb").readlines()
-thefile2function = open("file2function.txt", "rb").readlines()
-
-#goal 1: same function same value
-# samefunctionsamevalue = open("same-function-same-value.txt", "w")
-#test 
-samefunctionsamevalue = open("same-function-same-value.txt", "w")
-
-samefunctiondifferentvalueValueinFile1 = open("samefunctiondifferentvaluethevalueinFile1.txt", "w")
-samefunctiondifferentvalueValueinFile2 = open("samefunctiondifferentvaluethevalueinFile2.txt", "w")
-
-#write comments for the same-function-same-value.txt file 
-samefunctionsamevalue.writelines("#This is the file which contain the same function with same value between file1 and file2 \n")
-samefunctionsamevalue.writelines("#The file1 is:"+ str(sys.argv[1]) +"\n")
-samefunctionsamevalue.writelines("#The file2 is:"+ str(sys.argv[2]) +"\n")
-
-
-#write comments for the samefunctiondifferentvaluethevalueinFile1.txt file 
-samefunctiondifferentvalueValueinFile1.writelines("#This is the file1 which contain the same function but different value between file1 and file2 ")
-samefunctiondifferentvalueValueinFile1.writelines("and the value is from file1 \n")
-
-#process the line1 and line2
-for line1 in file1N:
-	if line1[0] == "#": 
-		continue
-	elif line1 in file2N:
-		samefunctionsamevalue.write(line1);
-	else:
-		#goal 2: same function different value
-		line1count = line1.split("=")
-		line1count[0] += '\n'
-		if line1count[0] in thefile2function:
-			samefunctiondifferentvalueValueinFile1.write(line1)
-
-
-# samefunctiondifferentvalueValueinFile1
-# quickfunctioncounter()
-
-#goal 2: same function different value - branch for file2
-samefunctiondifferentvalueValueinFile2.writelines("#This is the file1 which contain the same function but different value between file1 and file2 ")
-samefunctiondifferentvalueValueinFile2.writelines("and the value is from file2 \n")
-
-for line2 in file2N:
-	if line2[0] == "#": 
-		continue
-	if line2 in file1N:
-		continue;
-	else:
-		#goal 2: same function different value
-		line2count = line2.split("=")
-		line2count[0] += '\n'
-		if line2count[0] in thefile1function:
-			samefunctiondifferentvalueValueinFile2.write(line2)
-
-
-
-#goal 3: different function , different value, and only in file1
-#functionOnlyinFile1.txt
-
-file3N = open("functionOnlyinFile1.txt", "w");
-file3N.writelines("#This file contains the unique functions only in file1 \n")
-
-
-for line3 in file1N:
-	if line3[0] == "#": 
-		continue
-	else:
-		theline3 = line3.split("=")
-		theline3[0] += '\n'
-		# for a in thefile2function:
-		if theline3[0] in thefile2function:
+while (a>0):
+	if count ==2:
+		print "tell me"
+	anotherfile = open(str(sys.argv[count]),'rb').readlines();
+	samefunctiondifferentvalue = open("samefunctiondifferentvalueinFile"+str(count)+".txt" ,'w')
+	for line4 in anotherfile:
+		if line4 in samefunctionsamevalue:
 			continue
 		else:
-			file3N.write(line3);
-
-
-#goal 4:different function , different value , and only in file2
-#functionOnlyinFile2.txt
-
-
-file4N = open("functionOnlyinFile2.txt", "w");
-file4N.writelines("#This file contains the unique functions only in file2 \n")
-
-
-for line4 in file2N:
-	if line4[0] == "#": 
-		continue
-	else:
-		theline4 = line4.split("=")
-		theline4[0] += '\n'
-		if theline4[0] in thefile1function:
-			continue
-		else:
-			file4N.write(line4);
+			thecuttenline4 = line4.split("=")
+			thecuttenline4[0] += '\n'
+			if thecuttenline4[0] in list4:
+				print "yes"
+				samefunctiondifferentvalue.writelines(line4);
+	count = count +1
+	a = a-1
 
 
 
 
-#remove the useless files
-os.remove("file1function.txt")
-os.remove("file2function.txt")
+
+
+
+
+
 
 
