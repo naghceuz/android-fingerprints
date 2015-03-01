@@ -79,8 +79,6 @@ count = 1
 
 
 while (a>0):
-	if count ==2:
-		print "tell me"
 	anotherfile = open(str(sys.argv[count]),'rb').readlines();
 	samefunctiondifferentvalue = open("samefunctiondifferentvalueinFile"+str(count)+".txt" ,'w')
 	for line4 in anotherfile:
@@ -94,6 +92,55 @@ while (a>0):
 				samefunctiondifferentvalue.writelines(line4);
 	count = count +1
 	a = a-1
+
+
+
+
+
+
+
+
+
+
+
+# #Goal 3: uniqueFunctioninFile1.txt uniqueFunctioninFile2.txt uniqueFunctioninFile3.txt
+# # change compare to 
+
+# a = len(sys.argv) - 1
+# count = 1
+
+# while(a>0):
+
+# for line5 in:
+# 	thelastfunction = open(str(sys.argv[count]),'rb').readlines();
+# 	differentfunction = 
+def compare2(list1 , list2):
+	list6 = []
+	for line1 in list1:
+		if line1 in list2:
+			continue
+		else:
+			list6.append(line1)
+	return list6
+
+
+
+for x in range(1,len(sys.argv)):
+	x2 = (x + 1) % (len(sys.argv) - 1)
+	a2 = len(sys.argv) - 2
+	count = x2
+	thenew3 = open(str(sys.argv[x]),"rb").readlines()
+
+	while (a2>0):
+		newlist = open(str(sys.argv[count]),'rb').readlines()
+		thenew3 = compare2(thenew3, newlist)
+		a2 = a2 - 1
+		count = (count + 1) % (len(sys.argv) - 1)
+
+	#write into the samefunctionsamevalue
+	difffunctionsamevalue = open("uniquefunctioninfile" + str(x) +".txt","w")
+	for line8 in thenew3:
+		difffunctionsamevalue.writelines(line8)
 
 
 
