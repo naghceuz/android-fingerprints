@@ -42,7 +42,6 @@ for line in thenew:
 
 
 
-
 #Goal 2:samefunctiondifferentvalueinFile1.txt samefunctiondifferentvalueinFile2.txt 
 
 list4 = []
@@ -92,11 +91,6 @@ while (a>0):
 				samefunctiondifferentvalue.writelines(line4);
 	count = count +1
 	a = a-1
-
-
-
-
-
 
 
 
