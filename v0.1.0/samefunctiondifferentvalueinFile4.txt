@@ -3187,6 +3187,7 @@ android.widget.AbsListView.TOUCH_MODE_SCROLL=3
 android.widget.AbsListView.TOUCH_MODE_TAP=1
 android.widget.AbsListView.TOUCH_MODE_UNKNOWN=-1
 android.widget.AbsSeekBar.NO_ALPHA=255
+android.widget.AdapterView.INVALID_POSITION=-1
 android.widget.AdapterView.INVALID_ROW_ID=-9223372036854775808
 android.widget.AdapterView.ITEM_VIEW_TYPE_HEADER_OR_FOOTER=-2
 android.widget.AdapterView.ITEM_VIEW_TYPE_IGNORE=-1

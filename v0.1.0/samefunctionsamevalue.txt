@@ -1,3 +1,4 @@
+#This file contains same function and same values among your input files 
 android.R$styleable.AbsListView_cacheColorHint=6
 android.R$styleable.AbsListView_choiceMode=7
 android.R$styleable.AbsListView_drawSelectorOnTop=1

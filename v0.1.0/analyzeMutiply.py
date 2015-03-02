@@ -37,9 +37,10 @@ while (a>0):
 
 #write into the samefunctionsamevalue
 samefunctionsamevalue = open("samefunctionsamevalue.txt","w")
+samefunctionsamevalue.writelines("#This file contains same function and same values ")
+samefunctionsamevalue.writelines("among your input files \n")
 for line in thenew:
 	samefunctionsamevalue.writelines(line)
-
 
 
 #Goal 2:samefunctiondifferentvalueinFile1.txt samefunctiondifferentvalueinFile2.txt 
@@ -49,7 +50,7 @@ a = len(sys.argv) - 2
 count = 2
 
 inputFile1 = open(str(sys.argv[1]),"rb").readlines()
-samefunctiondifferentvalueinFile1 = open("samefunctiondifferentvalueinFile1.txt",'w')
+# samefunctiondifferentvalueinFile1 = open("samefunctiondifferentvalueinFile1.txt",'w')
 
 for line2 in inputFile1:
 	thecutline = line2.split("=")
@@ -80,6 +81,7 @@ count = 1
 while (a>0):
 	anotherfile = open(str(sys.argv[count]),'rb').readlines();
 	samefunctiondifferentvalue = open("samefunctiondifferentvalueinFile"+str(count)+".txt" ,'w')
+	samefunctiondifferentvalue.writelines("This contain contains the same function but different value from File"+ str(count)+ " \n")
 	for line4 in anotherfile:
 		if line4 in samefunctionsamevalue:
 			continue
@@ -133,6 +135,7 @@ for x in range(1,len(sys.argv)):
 
 	#write into the samefunctionsamevalue
 	difffunctionsamevalue = open("uniquefunctioninfile" + str(x) +".txt","w")
+	difffunctionsamevalue.writelines("This file contains the unique function only in input File"+ str(x) + "  \n" )
 	for line8 in thenew3:
 		difffunctionsamevalue.writelines(line8)
 

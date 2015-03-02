@@ -76,6 +76,7 @@ android.util.AndroidRuntimeException.getLocalizedMessage()=null
 android.util.AndroidRuntimeException.getMessage()=null
 android.util.DisplayMetrics.DENSITY_DEVICE=480
 android.view.animation.Transformation.toShortString()={alpha=1.0 matrix=[1.0, 0.0, 0.0][0.0, 1.0, 0.0][0.0, 0.0, 1.0]}
+android.widget.AdapterView.INVALID_POSITION=-1
 android.widget.AdapterView.INVALID_ROW_ID=-9223372036854775808
 android.widget.AdapterView.ITEM_VIEW_TYPE_HEADER_OR_FOOTER=-2
 android.widget.AdapterView.ITEM_VIEW_TYPE_IGNORE=-1

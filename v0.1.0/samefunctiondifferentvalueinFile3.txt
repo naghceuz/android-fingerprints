@@ -2178,6 +2178,7 @@ android.webkitsec.WebViewInputDispatcher$UiHandler.MSG_HITTEST=7
 android.webkitsec.WebViewInputDispatcher$UiHandler.MSG_LONG_PRESS=3
 android.webkitsec.WebViewInputDispatcher$UiHandler.MSG_SHOW_TAP_HIGHLIGHT=5
 android.webkitsec.WebViewInputDispatcher$UiHandler.MSG_WEBKIT_TIMEOUT=2
+android.widget.AdapterView.INVALID_POSITION=-1
 android.widget.AdapterView.INVALID_ROW_ID=-9223372036854775808
 android.widget.AdapterView.ITEM_VIEW_TYPE_HEADER_OR_FOOTER=-2
 android.widget.AdapterView.ITEM_VIEW_TYPE_IGNORE=-1

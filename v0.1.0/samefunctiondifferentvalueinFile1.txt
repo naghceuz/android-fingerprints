@@ -394,6 +394,7 @@ android.view.KeyCharacterMap.DOT_WWW_INPUT=
 android.view.View.SYSTEM_UI_FLAG_SHOW_NAVIGATION_IN_EXPANDED_DESKTOP=32768
 android.view.WindowManager$LayoutParams.PREVENT_POWER_KEY=-2147483648
 android.view.animation.Transformation.toShortString()={alpha=1.0 matrix=[1.0, 0.0, 0.0][0.0, 1.0, 0.0][0.0, 0.0, 1.0]}
+android.widget.AdapterView.INVALID_POSITION=-1
 android.widget.AdapterView.INVALID_ROW_ID=-9223372036854775808
 android.widget.AdapterView.ITEM_VIEW_TYPE_HEADER_OR_FOOTER=-2
 android.widget.AdapterView.ITEM_VIEW_TYPE_IGNORE=-1

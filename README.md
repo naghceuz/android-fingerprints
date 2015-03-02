@@ -11,30 +11,20 @@ And you need to specifiy the output's name
 An example: 
 python analyze.py google.txt oneplus.txt same-function-same-value.txt samefunctiondifferentvaluethevalueinFile1.txt samefunctiondifferentvaluethevalueinFile2.txt functionOnlyinFile1.txt functionOnlyinFile2.txt
 
+It will generate five different files based and generate a comprehensive report of the difference between file1.txt and file2.txt.
 
+
+If you want to do comparsion more than two files, 
+you should use analyzeMutiply.py script, but since the input is more than two, 
+you won't be able to specificy the output 
+
+An example:
+python analyzeMutiply.py oneplus.txt google.txt samsung.txt
+
+It will generate 7 files if the comparsion is between three files
 
 
 It will generate four different files based and generate a comprehensive report of the difference between file1.txt and file2.txt.
-
-
-
-First output file:  same-function-same-value.txt
-Description: It contains the same functions with the same value in both file
-
-
-Second output file:  same-function-different-value.txt.txt
-Description: It contains the same functions with the different values in both file
-The value is the value contained in your input file1
-
-
-Third output file: functionOnlyinFile1.txt
-Description: It contains the unique functions only in your input file1
-
-
-Fourth output file: functionOnlyinFile2.txt 
-Description: It contains the unique functions only in your input file2
-
-
 
 
 
