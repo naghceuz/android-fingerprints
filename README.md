@@ -29,8 +29,6 @@ It will generate four different files based and generate a comprehensive report 
 
 
 
-
-
 The value of this script:
 The Standard Android emulator fingerprint code(from Android Developer Official Websitde) has more than 1,5000 lines of java code. Each line is a function of different purpose. For cell phone companies uses Android platoform, they will first download the standard Android emulator source code and will modification based on the Android emulator source code. Finally the fingerprint in your Android device is just the modification of the Android emulator source code.
 

@@ -89,7 +89,6 @@ while (a>0):
 			thecuttenline4 = line4.split("=")
 			thecuttenline4[0] += '\n'
 			if thecuttenline4[0] in list4:
-				print "yes"
 				samefunctiondifferentvalue.writelines(line4);
 	count = count +1
 	a = a-1
